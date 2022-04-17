@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="tt"> </p>
+    <p id="ner"></p>
+    <script>
+        var triangle1 = {
+     a: 10,
+     b: 10,
+     c: 10,
+   } 
+   var triangle2 = {
+     a: 16, 
+     b: 10,
+     c: 10,
+   }
+    var s = (triangle1['a'] + triangle1['b'] + triangle1['c'])/2;
+    var area =  Math.sqrt(s*((s-triangle1['a'])*(s-triangle1['b'])*(s-triangle1['c'])));
+    document.getElementById('t1').innerHTML='triangle1 hariu  '+area;
+    var ss= (triangle2['a'] + triangle2['b'] + triangle2['c'])/2;
+    var areas= Math.sqrt(ss*((ss-triangle2['a'])*(ss-triangle2['b'])*(ss-triangle2['c'])));
+    document.getElementById('t2').innerHTML="triangle2 hariu  "+ areas;
+    if(area>areas){
+        document.getElementById('tt').innerHTML='2 gurwaljing jishihed triangle 1-iin talbai ih';
+    }else if(area<areas){
+        document.getElementById('tt').innerHTML='2 gurwanljing jishihed triangle 2-iin talbai ih'
+    }else if(area=areas){
+        document.getElementById('tt').innerHTML='2 gurwaljing jishihed 2 gurwaljingn talbai tentsuu'
+    }
+
+
+    var person = {
+      firstName: "Төртулга",
+      lastName: "Очирбат",
+      age: 23,
+      address: {
+        country: "Монгол",
+        city: "Улаанбаатар",
+        district: "Сүхбаатар",
+        subDistrict: 151,
+        street: "Залуучууд",
+        houseNumber:123,
+        floor:4,
+        room:27
+      },
+      gender: "эрэгтэй"
+    }
+    document.getElementById("ner").innerHTML=person.lastName+' овогтой '+person.firstName+' нь '+ person.age+' настай '
+    + person.gender+ ' бөгөөд '+ person.address.country+' '+ person.address.city+' '+ person.address.district+' '+ person.address.subDistrict
+    +' '+person.address.street+' '+person.address.houseNumber+' '+person.address.floor+' '+person.address.room +' амьдардаг.';
+    
+    
+    </script>
+</body>
+</html>
